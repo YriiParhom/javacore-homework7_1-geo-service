@@ -16,4 +16,11 @@ class GeoServiceImplTest {
                 .thenReturn(new Location("Moscow", Country.RUSSIA, null, 0));
     }
 
+    @Test
+    void testByIp2(){
+        GeoServiceImpl geoService = Mockito.mock(GeoServiceImpl.class);
+        Mockito.when(geoService.byIp("96"))
+                .thenReturn(new Location("New York", Country.USA, null,  0));
+    }
+
 }
